@@ -13,15 +13,14 @@ class Binary_Expr_Node : public Expr_Node
 {
 
 	public:
-		
 		Binary_Expr_Node();
 		virtual ~Binary_Expr_Node();
 		
 		virtual int accept(Expr_Node_Visitor & v)=0;
-		Expr_Node & getrightChild(void);
-		Expr_Node & getleftChild(void);
-		Expr_Node & setleftChild(Expr_Node * node);
-		Expr_Node & setrightChild(Expr_Node * node);
+		Expr_Node & getRightChild(void);
+		Expr_Node & getLeftChild(void);
+		Expr_Node & setLeftChild(Expr_Node * node);
+		Expr_Node & setRightChild(Expr_Node * node);
 		virtual int priority()=0;
 		
 	protected:

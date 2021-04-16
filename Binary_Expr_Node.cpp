@@ -19,22 +19,22 @@ Binary_Expr_Node::~Binary_Expr_Node()
 }
 
 
-Expr_Node & Binary_Expr_Node::getleftChild()
+Expr_Node & Binary_Expr_Node::getLeftChild()
 {
 	return * this->left_;
 }
 
-Expr_Node & Binary_Expr_Node::getrightChild()
+Expr_Node & Binary_Expr_Node::getRightChild()
 {
 	return * this->right_;
 }
 
-Expr_Node & Binary_Expr_Node::setleftChild(Expr_Node * node)
+Expr_Node & Binary_Expr_Node::setLeftChild(Expr_Node * node)
 {
 	this->left_ = node;
 }
 
-Expr_Node & Binary_Expr_Node::setrightChild(Expr_Node * node)
+Expr_Node & Binary_Expr_Node::setRightChild(Expr_Node * node)
 {
 	this->right_ = node;
 }

@@ -3,24 +3,24 @@
 // received any help on this assignment.
 // Clark Otte
 
-#include "Div_Node.h"
+#include "Mod_Node.h"
 
-Div_Node::Div_Node()
+Mod_Node::Mod_Node()
 {
     
 }
 
-Div_Node::~Div_Node()
+Mod_Node::~Mod_Node()
 {
     
 }
 
-void Div_Node::accept(Expr_Node_Visitor &v)
+void Mod_Node::accept(Expr_Node_Visitor &v)
 {
-	v.visitDivNode(*this);
+	v.visitModNode(*this);
 }
 
-int Div_Node::priority()
+int Mod_Node::priority()
 {
 	return 2;
 }

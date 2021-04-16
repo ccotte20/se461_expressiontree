@@ -3,16 +3,16 @@
 // received any help on this assignment.
 // Clark Otte
 
-#ifndef _DIV_NODE_
-#define _DIV_NODE_
+#ifndef _MOD_NODE_
+#define _MOD_NODE_
 
 #include "Binary_Expr_Node.h"
 
 
-class Div_Node : public Binary_Expr_Node{
+class Mod_Node : public Binary_Expr_Node{
 	public:
-		Div_Node(void);
-		virtual ~Div_Node(void);
+		Mod_Node(void);
+		virtual ~Mod_Node(void);
 
 		virtual void accept(Expr_Node_Visitor & v);
 		virtual int priority();

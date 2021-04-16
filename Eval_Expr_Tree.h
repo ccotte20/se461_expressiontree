@@ -20,17 +20,17 @@ class Eval_Expr_Tree : public Expr_Node_Visitor
 		Eval_Expr_Tree();
 		virtual ~Eval_Expr_Tree();
 		
-		virtual void visitAddNode(const Add_Node & node);
-		virtual void visitNumNode(const Num_Node & node);
-		virtual void visitSubNode(const Sub_Node & node);
-		virtual void visitMultNode(const Mult_Node & node);
-		virtual void visitDivNode(const Div_Node & node);
-		virtual void visitModNode(const Mod_Node & node);
+		virtual void visitAddNode(Add_Node & node);
+		virtual void visitNumNode(Num_Node & node);
+		virtual void visitSubNode(Sub_Node & node);
+		virtual void visitMultNode(Mult_Node & node);
+		virtual void visitDivNode(Div_Node & node);
+		virtual void visitModNode(Mod_Node & node);
 		
 		int result();
 	
 	private:
-		int result_;
+		std::stack<int> result_;
 };
 
 #endif

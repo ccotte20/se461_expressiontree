@@ -3,18 +3,23 @@
 // received any help on this assignment.
 // Clark Otte
 
-#ifndef _DIV_NODE_
-#define _DIV_NODE_
+#ifndef _NUM_NODE_
+#define _NUM_NODE_
 
-#include "Binary_Expr_Node.h"
+#include "Expr_Node.h"
 
 
-class Div_Node : public Binary_Expr_Node{
+class Num_Node : public Expr_Node{
 	public:
-		Div_Node(void);
-		virtual ~Div_Node(void);
+		Num_Node(int n);
+		virtual ~Num_Node();
 
 		virtual void accept(Expr_Node_Visitor & v);
 		virtual int priority();
+		
+		int getNum()
+	private:
+		Num_Node();
+		int n_;
 };
 #endif
