@@ -6,6 +6,10 @@
 #ifndef _EXPR_TREE_BUILDER_
 #define _EXPR_TREE_BUILDER_
 
+#include <cstdlib>
+#include <stdlib.h>
+#include <iostream>
+#include <sstream>
 #include "Expr_Builder.h"
 
 

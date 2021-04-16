@@ -1,0 +1,34 @@
+project (project4) {
+	exename = tree
+	
+	Source_Files {
+		Add_Node.cpp
+		Binary_Expr_Node.cpp
+		Div_Node.cpp
+		driver.cpp
+		Eval_Expr_Tree.cpp
+		Expr_Builder.cpp
+		Expr_Tree_Builder.cpp
+		Mod_Node.cpp
+		Mult_Node.cpp
+		Num_Node.cpp
+		Par_Node.cpp
+		Sub_Node.cpp
+	}
+	
+	Header_Files {
+		Add_Node.h
+		Binary_Expr_Node.h
+		Div_Node.h
+		Eval_Expr_Tree.h
+		Expr_Builder.h
+		Expr_Node.h
+		Expr_Node_Visitor.h
+		Expr_Tree_Builder.h
+		Mod_Node.h
+		Mult_Node.h
+		Num_Node.h
+		Par_Node.h
+		Sub_Node.h
+	}
+}
