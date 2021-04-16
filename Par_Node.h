@@ -6,10 +6,11 @@
 #ifndef _PAR_NODE_
 #define _PAR_NODE_
 
-#include "Expr_Node.h"
+#include "Binary_Expr_Node.h"
 
 
-class Par_Node : public Expr_Node{
+class Par_Node : public Binary_Expr_Node
+{
 	public:
 		Par_Node(int n);
 		virtual ~Par_Node();

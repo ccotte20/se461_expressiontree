@@ -15,7 +15,7 @@ Eval_Expr_Tree::~Eval_Expr_Tree()
 	
 }
 
-void Eval_Expr_Tree::visitAddNode ( Addition_Node & node)
+void Eval_Expr_Tree::visitAddNode (Addition_Node & node)
 {
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);

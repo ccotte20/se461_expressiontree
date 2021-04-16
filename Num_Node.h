@@ -6,10 +6,10 @@
 #ifndef _NUM_NODE_
 #define _NUM_NODE_
 
-#include "Expr_Node.h"
+#include "Binary_Expr_Node.h"
 
 
-class Num_Node : public Expr_Node{
+class Num_Node : public Binary_Expr_Node{
 	public:
 		Num_Node(int n);
 		virtual ~Num_Node();
