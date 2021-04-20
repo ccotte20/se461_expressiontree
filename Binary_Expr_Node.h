@@ -15,7 +15,6 @@ class Binary_Expr_Node : public Expr_Node
 	public:
 		Binary_Expr_Node();
 		virtual ~Binary_Expr_Node();
-		
 		virtual int accept(Expr_Node_Visitor & v)=0;
 		Expr_Node & getRightChild(void);
 		Expr_Node & getLeftChild(void);

@@ -8,7 +8,7 @@
 
 #include "Binary_Expr_Node.h"
 
-
+// Dr. Ryan: Is a parenthesis really a type of Binary Expression Node?
 class Par_Node : public Binary_Expr_Node
 {
 	public:

@@ -1,3 +1,5 @@
+// Dr. Ryan: Don't forget to include the honor pledge and digital signature in each file.
+
 #include "Expr_Builder.h"
 
 
@@ -11,6 +13,7 @@ Expr_Builder::~Expr_Builder()
     
 }
 
+// Dr. Ryan: You really only need to get the root of the tree.
 Expr_Node * Expr_Builder::getTree()
 {
 	return this->tree_;
@@ -62,6 +65,8 @@ bool Expr_Builder::isNumsEmpty()
     return this->numbers_.empty();
 }
 
+// Dr. Ryan: This method will not properly construct the tree as we need 
+//			 it - we will have to do some connecting to get it right.
 void Expr_Builder::popConnectPush();
 {
 	Expr_Node * N = this->operators_.top();

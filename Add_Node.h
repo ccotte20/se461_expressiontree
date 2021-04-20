@@ -13,7 +13,8 @@ class Add_Node : public Binary_Expr_Node{
 	public:
 		Add_Node();
 		virtual ~Add_Node();
-
+		// Dr. Ryan: Your Base class(es) have the return type of integer here...I think 
+		//			 this is likely what you want though.
 		virtual void accept(Expr_Node_Visitor & v);
 		virtual int priority();
 };
