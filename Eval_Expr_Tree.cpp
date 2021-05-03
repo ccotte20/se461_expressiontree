@@ -15,7 +15,7 @@ Eval_Expr_Tree::~Eval_Expr_Tree()
 	
 }
 
-void Eval_Expr_Tree::visitAddNode (Addition_Node & node)
+void Eval_Expr_Tree::visitAddNode (Add_Node & node)
 {
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);
@@ -43,7 +43,7 @@ void Eval_Expr_Tree::visitSubNode(Sub_Node & node)
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);
 	
-	int num1 = this->result_.top()
+	int num1 = this->result_.top();
 	this->result_.pop();
 	
 	int num2 = this->result_.top();
@@ -59,7 +59,7 @@ void Eval_Expr_Tree::visitMultNode(Mult_Node & node)
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);
 	
-	int num1 = this->result_.top()
+	int num1 = this->result_.top();
 	this->result_.pop();
 	
 	int num2 = this->result_.top();
@@ -75,7 +75,7 @@ void Eval_Expr_Tree::visitDivNode(Div_Node & node)
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);
 	
-	int num1 = this->result_.top()
+	int num1 = this->result_.top();
 	this->result_.pop();
 	
 	int num2 = this->result_.top();
@@ -84,7 +84,7 @@ void Eval_Expr_Tree::visitDivNode(Div_Node & node)
 	if(num2 == 0)
 	{
 		std::cout<<"Divide by 0"<<std::endl;
-		throw std::logic_error("Divide by 0")
+		throw std::logic_error("Divide by 0");
 	}
 	else
 	{
@@ -98,7 +98,7 @@ void Eval_Expr_Tree::visitModNode(Mod_Node & node)
 	node.getLeftChild().accept(*this);
 	node.getRightChild().accept(*this);
 	
-	int num1 = this->result_.top()
+	int num1 = this->result_.top();
 	this->result_.pop();
 	
 	int num2 = this->result_.top();
@@ -107,7 +107,7 @@ void Eval_Expr_Tree::visitModNode(Mod_Node & node)
 	if(num2 == 0)
 	{
 		std::cout<<"Divide by 0"<<std::endl;
-		throw std::logic_error("Divide by 0")
+		throw std::logic_error("Divide by 0");
 	}
 	else
 	{

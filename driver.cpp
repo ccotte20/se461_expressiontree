@@ -5,6 +5,9 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <iostream>
+#include "Expr_Tree_Builder.h"
+#include "Expr_Node.h"
+#include "Eval_Expr_Tree.h"
 
 int main()
 {
@@ -16,12 +19,14 @@ int main()
 		
 		if(infix != "QUIT")
 		{
-			Expr_Tree_Builder tree();
-			tree.buildExprTree(infix);
+			Expr_Tree_Builder tree;
+			tree.buildExpr(infix);
 			
-			Expr_Node * root = tree.getTree();
+			Expr_Node * root = tree.getRoot();
 			
-			Eval_Expr_Tree eval();
+			Eval_Expr_Tree eval;
+			
+			root->accept(eval);
 			
 			int result = eval.result();
 			

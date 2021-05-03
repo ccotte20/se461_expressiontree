@@ -1,7 +1,14 @@
+// Dr. Ryan: Don't forget to include the honor pledge and digital signature in each file.
+// Fixed:
+// Honor Pledge:
+// I pledge that I have neither given nor 
+// received any help on this assignment.
+// Clark Otte
+
 #include "Expr_Builder.h"
 
 
-Expr_Builder::Expr_Builder() : tree_(), numbers_(), operators_()
+Expr_Builder::Expr_Builder() : root_(), numbers_(), operators_()
 {
     
 }
@@ -11,14 +18,15 @@ Expr_Builder::~Expr_Builder()
     
 }
 
-Expr_Node * Expr_Builder::getTree()
+// Dr. Ryan: You really only need to get the root of the tree.
+Expr_Node * Expr_Builder::getRoot()
 {
-	return this->tree_;
+	return this->root_;
 }
 
-void Expr_Builder::setTree(Expr_Node * n)
+void Expr_Builder::setRoot(Expr_Node * n)
 {
-	this->tree_=n;
+	this->root_=n;
 }
 
 void Expr_Builder::pushNum(Expr_Node * n)
@@ -62,10 +70,12 @@ bool Expr_Builder::isNumsEmpty()
     return this->numbers_.empty();
 }
 
-void Expr_Builder::popConnectPush();
+// Dr. Ryan: This method will not properly construct the tree as we need 
+//			 it - we will have to do some connecting to get it right.
+void Expr_Builder::popConnectPush()
 {
 	Expr_Node * N = this->operators_.top();
-	this->operators_.pop()
+	this->operators_.pop();
 	
 	N->setRightChild(this->numbers_.top());
 	this->numbers_.pop();

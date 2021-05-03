@@ -9,7 +9,8 @@
 #include "Binary_Expr_Node.h"
 
 
-class Num_Node : public Binary_Expr_Node{
+class Num_Node : public Binary_Expr_Node
+{
 	public:
 		Num_Node(int n);
 		virtual ~Num_Node();
@@ -17,7 +18,7 @@ class Num_Node : public Binary_Expr_Node{
 		virtual void accept(Expr_Node_Visitor & v);
 		virtual int priority();
 		
-		int getNum()
+		int getNum();
 	private:
 		Num_Node();
 		int n_;

@@ -4,8 +4,9 @@
 // Clark Otte
 
 #ifndef _EVAL_EXPR_TREE_
-#def _EVAL_EXPR_TREE_
+#define _EVAL_EXPR_TREE_
 
+#include <stack>
 #include "Expr_Node_Visitor.h"
 #include "Add_Node.h"
 #include "Num_Node.h"

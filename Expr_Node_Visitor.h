@@ -4,7 +4,9 @@
 // Clark Otte
 
 #ifndef _EXPR_NODE_VISITOR_
-#def _EXPR_NODE_VISITOR_
+// Dr. Ryan: This will cause a compilation error here, you likely mean #define
+// Fixed: Changed to define
+#define _EXPR_NODE_VISITOR_
 
 #include <iostream>
 class Add_Node;

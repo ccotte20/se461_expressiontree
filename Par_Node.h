@@ -8,11 +8,12 @@
 
 #include "Binary_Expr_Node.h"
 
-
+// Dr. Ryan: Is a parenthesis really a type of Binary Expression Node?
+// Fixed: needed for pop connect push
 class Par_Node : public Binary_Expr_Node
 {
 	public:
-		Par_Node(int n);
+		Par_Node();
 		virtual ~Par_Node();
 
 		virtual void accept(Expr_Node_Visitor & v);

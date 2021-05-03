@@ -32,3 +32,4 @@ project (project4) {
 		Sub_Node.h
 	}
 }
+// to use 'thomas% mwc.pl -type make' then 'thomas% make' then 'a1'

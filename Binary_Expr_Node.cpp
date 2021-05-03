@@ -29,12 +29,12 @@ Expr_Node & Binary_Expr_Node::getRightChild()
 	return * this->right_;
 }
 
-Expr_Node & Binary_Expr_Node::setLeftChild(Expr_Node * node)
+void Binary_Expr_Node::setLeftChild(Expr_Node * node)
 {
 	this->left_ = node;
 }
 
-Expr_Node & Binary_Expr_Node::setRightChild(Expr_Node * node)
+void Binary_Expr_Node::setRightChild(Expr_Node * node)
 {
 	this->right_ = node;
 }

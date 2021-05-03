@@ -17,7 +17,7 @@ Expr_Tree_Builder::~Expr_Tree_Builder()
 
 void Expr_Tree_Builder::checkPriority(Expr_Node * node)
 {
-	if(this->isOpsEmtpy || this->getTopOp()->priority() == 0 || (this->getTopOp()->priority() < node->priority()))
+	if(this->isOpsEmpty() || this->getTopOp()->priority() == 0 || (this->getTopOp()->priority() < node->priority()))
 	{
 		this->pushOp(node);
 	}
@@ -27,13 +27,13 @@ void Expr_Tree_Builder::checkPriority(Expr_Node * node)
 		{
 			this->popConnectPush();
 		}
-		while(!this->isOpsEmtpy || this->getTopOp()->priority() != 0 || (node->priority() < this->getTopOp()->priority()))
+		while(!this->isOpsEmpty() || this->getTopOp()->priority() != 0 || (node->priority() < this->getTopOp()->priority()));
 		
 		this->pushOp(node);
 	}
 }
 
-void Expr_Tree_Builder::buildExprTree(std::string expression)
+void Expr_Tree_Builder::buildExpr(std::string expression)
 {
 	std::istringstream input(expression);
 	std::string t;
@@ -46,10 +46,10 @@ void Expr_Tree_Builder::buildExprTree(std::string expression)
 		{
 			this->buildOPar();
 		}
-		else if(!(atoi(token.c_str())==0 & token[0]!='0'))
+		else if(!(atoi(t.c_str())==0 & t[0]!='0'))
         {
-            std::istringstream token_num(token);
-            token_num >> number;
+            std::istringstream t_num(t);
+            t_num >> number;
             this->buildNum(number);
         }
 		else if(t == "+")
@@ -86,12 +86,12 @@ void Expr_Tree_Builder::buildExprTree(std::string expression)
 			return;
 		}
 		
-		while(!this->isOpsEmtpy())
+		while(!this->isOpsEmpty())
 		{
 			this->popConnectPush();
 		}
 		
-		this->setTree(this->getTopNum());
+		this->setRoot(this->getTopNum());
 	}
 }
 

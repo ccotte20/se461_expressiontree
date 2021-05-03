@@ -9,7 +9,8 @@
 #include "Binary_Expr_Node.h"
 
 
-class Mult_Node : public Binary_Expr_Node{
+class Mult_Node : public Binary_Expr_Node
+{
 	public:
 		Mult_Node(void);
 		virtual ~Mult_Node(void);

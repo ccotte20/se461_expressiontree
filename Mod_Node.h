@@ -9,7 +9,8 @@
 #include "Binary_Expr_Node.h"
 
 
-class Mod_Node : public Binary_Expr_Node{
+class Mod_Node : public Binary_Expr_Node
+{
 	public:
 		Mod_Node(void);
 		virtual ~Mod_Node(void);

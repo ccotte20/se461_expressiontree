@@ -9,7 +9,8 @@
 #include "Binary_Expr_Node.h"
 
 
-class Div_Node : public Binary_Expr_Node{
+class Div_Node : public Binary_Expr_Node
+{
 	public:
 		Div_Node(void);
 		virtual ~Div_Node(void);

@@ -13,7 +13,11 @@ class Expr_Node
 	public:
 		Expr_Node(void) {}
 		virtual ~Expr_Node(void) {}
-		virtual int accept(Expr_Node_Visitor & v) = 0;
+		virtual void accept(Expr_Node_Visitor & v) = 0;
+		virtual Expr_Node & getRightChild(void)=0;
+		virtual Expr_Node & getLeftChild(void)=0;
+		virtual void setLeftChild(Expr_Node * node)=0;
+		virtual void setRightChild(Expr_Node * node)=0;
 		virtual int priority()=0;
 };
 

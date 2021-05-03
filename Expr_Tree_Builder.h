@@ -11,6 +11,13 @@
 #include <iostream>
 #include <sstream>
 #include "Expr_Builder.h"
+#include "Num_Node.h"
+#include "Add_Node.h"
+#include "Sub_Node.h"
+#include "Mult_Node.h"
+#include "Div_Node.h"
+#include "Mod_Node.h"
+#include "Par_Node.h"
 
 
 class Expr_Tree_Builder : public Expr_Builder
@@ -21,7 +28,7 @@ class Expr_Tree_Builder : public Expr_Builder
 		virtual ~Expr_Tree_Builder();
 	
 		virtual void checkPriority(Expr_Node * node);
-		virtual void buildExprTree(std::string expression);
+		virtual void buildExpr(std::string expression);
 		
 		virtual void buildNum (int n);
 		virtual void buildAdd();
@@ -30,6 +37,5 @@ class Expr_Tree_Builder : public Expr_Builder
 		virtual void buildDiv();
 		virtual void buildMod();
 		virtual void buildOPar();
-		virtual void buildCPar();
 };
 #endif
